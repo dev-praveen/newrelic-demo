@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: newrelic-demo
+  threads:
+    virtual:
+      enabled: true
+  datasource:
+    url: ${POSTGRES_CLOUD_URL:jdbc:postgresql://localhost:5432/postgres}
+    username: ${POSTGRES_CLOUD_USER:postgres}
+    password: ${POSTGRES_CLOUD_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: ecommerce
+    open-in-view: false
