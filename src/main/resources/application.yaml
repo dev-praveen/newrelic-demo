@@ -17,3 +17,7 @@ spring:
         format_sql: true
         default_schema: ecommerce
     open-in-view: false
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+    default-schema: ecommerce
